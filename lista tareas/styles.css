@@ -1,0 +1,49 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #009688; /* Verde agua */
+}
+
+#task-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #ffffff;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    background-color: #009688;
+    color: #ffffff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #00796b; /* Verde agua más oscuro al pasar el mouse */
+}
+
+#new-task {
+    padding: 5px;
+    margin: 5px 0;
+}
+
+/* Escala de grises para tareas completadas */
+li.completed {
+    background-color: #f0f0f0;
+}

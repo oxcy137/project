@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+}
+
+nav {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+nav a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.icono{
+    display: block;
+    z-index: 10000;
+    animation: moverizquieda 1s ease-in;
+}
+
+header {
+    background: #FF0099;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #493240, #FF0099);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #493240, #FF0099); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: auto;
+    padding: 48px;
+    width: 100%;
+}
+
+.container {
+    width: 95%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    justify-content: space-around;
+}
+
+.textos {
+    width: 50%;
+    color: #fff;
+}
+
+.textos h1 {
+    font-size: 100px;
+    animation: moverderecha 1s ease-in;
+}
+
+.textos h2 {
+    font-size: 20px;
+    animation: moverizquierda 1s ease-in;
+}
+
+.textos a {
+    display: inline-block;
+    color: #fff;
+    font-weight: 400;
+    text-decoration: none;
+    padding-right: 20px; /* Aquí corregí el lugar donde debería ir esta regla */
+    margin-top: 30px;
+    border: 1px solid #fff;
+    width: 150px;
+    border-radius: 3px;
+    text-align: center;
+    padding: 10px 0;
+    animation: moverarriba 1s ease-in;
+}
+
+img {
+    margin-left: 0; /* Aquí deberías poner el valor específico que desees, como 10px, por ejemplo */
+    max-width: 70%;
+    object-fit: cover;
+    animation: arriba 1s ease-in;
+}
+
+.wave {
+    height: 100px;
+    width: 100%;
+    background: #FF0099;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #493240, #FF0099);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #493240, #FF0099); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.enlaces{
+    position: fixed;
+    display: flex;
+    top: 0;
+    background: #000;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    transition: all 1s ease;
+    background: #1D2671;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #C33764, #1D2671);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #C33764, #1D2671); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.uno {
+      -webkit-clip-path: circle(0% at 0 0);
+      clip-path: circle(0% at 0 0);
+}
+.dos {
+    -webkit-clip-path: circle(150% at 0 0);
+    clip-path: circle(150% at 0 0);
+}
+    @keyframes moverizquierda{
+        0%{
+            opacity: 0;
+            transform: translatex(-100px);
+        }
+         100%{
+            opacity: 1;
+            translate: (0);
+         }
+    }
+    @keyframes moverderecha{
+        0%{
+            opacity: 0;
+            transform: translatex(100px);
+        }
+         100%{
+            opacity: 1;
+            translate: (0);
+         }
+    }
+    @keyframes moverarriba{
+        0%{
+            opacity: 0;
+            transform: translateY(-100px);
+        }
+         100%{
+            opacity: 1;
+            translate: (0);
+         }
+    } 
+    @keyframes arriba {
+        from {
+            opacity: 1;
+            transform: translateY(100%);
+        }
+        to {
+            opacity: 0;
+            transform: translateY(0%);
+        }
+    }
+    
+    
+        @media screen and (max-width: 1000PX) {
+        img{
+            height: 400px;
+        }
+    }
+     
+        @media screen and (max-width: 800PX) {
+        img{
+        height: 370px;
+    }
+    }
+        .textos h1{
+        font-size: 70px;
+     }
+        .textos h2{
+        font-size: 25px;
+     }
+        @media screen and (max-width: 700PX) {
+        img{
+        height: 250px;
+    }
+        .textos h1{
+        font-size: 70px;
+     }
+        .textos h2{
+        font-size: 25px;
+     }
+    }
+    
+     @media screen and (max-width: 800PX){
+        .container{
+            width: 100%;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        img{   
+        height: 370px;
+    }
+        .textos h1{
+        font-size: 60px;
+     }
+        .textos h2{
+        font-size: 25px;
+     }
+    }
+        
+     @media screen and (max-width: 340PX){
+        .container{
+            width: 100%;
+            flex-wrap: wrap-reverse;
+            justify-content: center;
+        }
+        img{   
+        height: 160px;
+    }
+        .textos h1{
+        font-size: 35px;
+     }
+     .textos a{
+        width: 120px;
+     }
+        .textos h2{
+        font-size: 15px;
+     }
+    }
